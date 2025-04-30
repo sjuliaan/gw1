@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer circle (compass) -->
+  <circle cx="100" cy="100" r="90" fill="#2B3A67" stroke="#48CAE4" stroke-width="4"/>
+  
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="70" fill="#5C7AEA" stroke="#48CAE4" stroke-width="2"/>
+  
+  <!-- Compass needle -->
+  <polygon points="100,30 110,100 100,170 90,100" fill="#FFFFFF" stroke="#48CAE4" stroke-width="2"/>
+  
+  <!-- Tech elements - circuit paths -->
+  <path d="M40,100 L80,100 M120,100 L160,100 M100,40 L100,80 M100,120 L100,160" 
+        stroke="#48CAE4" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Tech dots at compass points -->
+  <circle cx="100" cy="30" r="8" fill="#48CAE4"/>
+  <circle cx="170" cy="100" r="8" fill="#48CAE4"/>
+  <circle cx="100" cy="170" r="8" fill="#48CAE4"/>
+  <circle cx="30" cy="100" r="8" fill="#48CAE4"/>
+  
+  <!-- Central hub -->
+  <circle cx="100" cy="100" r="15" fill="#FFFFFF" stroke="#48CAE4" stroke-width="2"/>
+  
+  <!-- Binary code around inner circle -->
+  <text font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">
+    <textPath href="#textPath" startOffset="0%">10110010 01001011 11010100 01101001</textPath>
+  </text>
+  <path id="textPath" d="M100,30 A70,70 0 1,1 99,30" fill="none"/>
+</svg>

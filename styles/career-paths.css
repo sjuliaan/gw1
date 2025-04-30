@@ -1,0 +1,167 @@
+/* IT Career Compass - Career Paths Stylesheet */
+
+/* Import main styles for consistency */
+@import url('main.css');
+
+/* ===== Career Paths Explorer Specific Styles ===== */
+
+/* Career Path Cards */
+.career-paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.career-path {
+    background-color: var(--neutral-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.career-path:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.career-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--neutral-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto var(--spacing-md);
+}
+
+.career-path h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.career-path p {
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.career-path .btn-small {
+    align-self: center;
+}
+
+.career-path .contributor {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+}
+
+/* Filter Tags */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-tag {
+    background-color: var(--neutral-color);
+    border: 1px solid var(--medium-gray);
+    border-radius: 50px;
+    padding: var(--spacing-xs) var(--spacing-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.filter-tag:hover, .filter-tag.active {
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+    border-color: var(--secondary-color);
+}
+
+/* Career Search */
+.career-search {
+    max-width: 600px;
+    margin: var(--spacing-lg) auto 0;
+    position: relative;
+    display: flex;
+}
+
+.career-search input {
+    flex: 1;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--medium-gray);
+    font-size: 1rem;
+}
+
+.career-search .btn-small {
+    margin-left: var(--spacing-xs);
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--neutral-color);
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-xl);
+}
+
+.cta h2 {
+    color: var(--neutral-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta p {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .career-paths {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        gap: var(--spacing-sm);
+    }
+    
+    .filter-tag {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+@media (max-width: 576px) {
+    .career-paths {
+        grid-template-columns: 1fr;
+    }
+    
+    .career-search {
+        flex-direction: column;
+    }
+    
+    .career-search .btn-small {
+        margin-left: 0;
+        margin-top: var(--spacing-xs);
+    }
+    
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
